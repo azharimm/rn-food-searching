@@ -11,7 +11,7 @@ const SearchScreen = () => {
             term={term} 
             onTermChange={(newTerm) => setTerm(newTerm)}
             onTermSubmit={() => console.log('submitted')} />
-            <Text>Search Screen</Text>
+            <Text>This will be the food list screen</Text>
             <Text>{term}</Text>
         </View>
     )
