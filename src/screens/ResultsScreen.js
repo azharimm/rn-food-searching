@@ -1,7 +1,9 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native' 
 
-const ResultsScreen = () => {
+const ResultsScreen = ({navigation}) => {
+    const id = navigation.getParam('id')
+    console.log(id)
     return (
         <>
             <Text>Result Screen</Text>
