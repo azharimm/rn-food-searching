@@ -2,6 +2,7 @@ import React from 'react'
 import {View, StyleSheet, Text, FlatList} from 'react-native'
 import ResultsDetail from './ResultsDetail'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import {withNavigation} from 'react-navigation'
 
 const ResultList = ({title, results, navigation}) => {
     return (
@@ -36,4 +37,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ResultList
+export default withNavigation(ResultList)

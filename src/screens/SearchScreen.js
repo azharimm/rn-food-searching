@@ -3,10 +3,8 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import SearchBar from '../components/SearchBar'
 import useResults from '../hooks/useResults'
 import ResultsList from '../components/ResultsList'
-import { red } from 'ansi-colors'
 
-const SearchScreen = ({navigation}) => {
-    console.log(navigation)
+const SearchScreen = () => {
     const [term, setTerm] = useState('')
     const [searchApi, results, errorMessage] = useResults()
 
@@ -27,16 +25,13 @@ const SearchScreen = ({navigation}) => {
             <ScrollView>
                 <ResultsList 
                 results={filterResultsByPrice('$')} 
-                title="Cost Effective"
-                navigation={navigation} />
+                title="Cost Effective" />
                 <ResultsList 
                 results={filterResultsByPrice('$$')} 
-                title="Bit Pricier"
-                navigation={navigation} />
+                title="Bit Pricier" />
                 <ResultsList 
                 results={filterResultsByPrice('$$$')} 
-                title="Big Spender"
-                navigation={navigation} />
+                title="Big Spender" />
             </ScrollView>
         </>
     )
