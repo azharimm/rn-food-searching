@@ -5,6 +5,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import {withNavigation} from 'react-navigation'
 
 const ResultList = ({title, results, navigation}) => {
+    if(!results){
+        return null
+    }
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
